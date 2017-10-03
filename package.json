@@ -1,31 +1,30 @@
 {
-  "name": "browser-sync-jekyll",
-  "version": "0.0.0",
-  "description": "A starter project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
-  "main": "gulpfile.js",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio jekyll-gulp-sass-browser-sync",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^2.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shane Osbourne",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.8.8",
-    "gulp-sass": "^2.1.0",
-    "browser-sync": "^1.3.7",
-    "gulp-autoprefixer": "1.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
-  },
   "keywords": [
-    "jekyll",
-    "gulp",
-    "sass",
-    "browsersync"
+    "scroll"
   ],
-  "bugs": {
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
-  },
-  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
+  "author": "matt",
+  "license": "ISC"
 }
