@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+{% include header.html %}
+
+
+<div class="info">
+  <div class="container">
+    <div class="content">
+      <div class="logo">
+        <img src="assets/site-brand/matthew-lean.jpg">
+					<h3>Matthew Lean</h3>
+					<p>Digital Content Creator</p>
+      </div>
+      <div class="text">
+				<p>Digital Content Creator and graduate from Bournemouth University.
+					Feel free to check out <a class="bio" href="http://matthewlean.co.uk/portfolio.pdf">my portfolio</a> for all my recent projects and graphics work.
+					Extra info and writeup can be found on <a class="bio" href="http://matthewlean.co.uk/blog/">my blog</a>
+					 and please <a class="bio" href="mailto:mttlean@gmail.com">contact</a> me if you have any questions. </p>
+      </div>
+      <div class="links">
+				<a title="Email" class="btn btn-default" href="mailto:mttlean@gmail.com">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+				</a>
+				<a title="Lindedin" class="btn btn-default" href="https://www.linkedin.com/in/m-lean/">
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+				</a>
+				<a title="GitHub" class="btn btn-default" href="https://github.com/matthewlean">
+					<i class="fa fa-github" aria-hidden="true"></i>
+				</a>
+				<a title="Instagram" class="btn btn-default" href="https://www.instagram.com/matthewlean/">
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+				</a>
+				<a title="Twitter" class="btn btn-default" href="https://twitter.com/matthewLean_">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a title="Codepen" class="btn btn-default" href="http://codepen.io/matthewlean/">
+					<i class="fa fa-codepen" aria-hidden="true"></i>
+				</a>
+			</div>
+  </div>
+  </div>
+</div>
+
+<!--
+<div class="site-container">
+<section class="hero is-medium has-text-centered">
+  <div class="hero-body">
+    <div class="container">
+      <p id="p">
+        <img src="assets/p.jpg" style="border-radius:100em" ; width="150px;"></img>
+      </p>
+      <h2 id="bulma" class="title">
+        {{ site.name }}
+      </h2>
+      <h3 id="modern-framework" class="subtitle">
+        Digital Media Designer
+      </h3>
+      <p id="info">
+        Digital Content Creator and graduate from Bournemouth University. Feel free to check out <a class="bio" href="http://matthewlean.co.uk/portfolio.pdf">my portfolio</a> for all my recent projects and graphics work. Extra info and writeup can be
+        found on <a class="bio" href="http://matthewlean.co.uk/blog/">my blog</a> and please <a class="bio" href="mailto:mttlean@gmail.com">contact</a> me if you have any questions.
+      </p>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero">
+      <main class="bd-expo">
+        <div class="container">
+          <div class="bd-websites">
+            {% for post in site.posts %}
+            <article class="bd-website ">
+              <a href="{{ post.url }}">
+                    <img class="b-lazy" src="{{site.baseurl}}/assets/site-post/{{post.img}}" width="672" height="420">
+                  <span class="bd-website-overlay is-overlay"></span>
+              </a>
+              <h2 class="title is-5 bd-website-name is-marginless">{{ post.title | escape }}</h2>
+              <p class="has-text-grey-light bd-website-date">{{ post.author | escape }}</p>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+      </main>
+</section>
+
+<!--
+<section class="hero is-small">
+  <div class="wrapper">
+    <div class="latest-video-content col-lg-12">
+      <h1>Latest Posts</h1>
+      {% assign count = 0 %}
+      {% for post in site.posts %}
+      {% if post.tags contains "post" %}
+      {% assign count = count | plus:1 %}
+      <div class="sub-home-item col-lg-4">
+        <a href="{{ post.url | relative_url }}" class="sub-post-title">
+          <div class="sub-home-item sub-home-item-hero">
+            <img src="{{site.baseurl}}/assets/site-post/{{post.img}}" class="hero-article-image">
+          </div>
+          <h2 class="sub-post-title">{{ post.title | escape }}</h2>
+        </a>
+      </div>
+      {% if count == 3 %}{% break %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section> -->
+
+
+<!--
+            <article class="bd-website ">
+              <a class="bd-website-image" href="https://noggaholic.github.io" target="_blank">
+                    <img class="b-lazy" src="http://bulma.io/images/placeholders/empty.png" data-src="http://bulma.io/images/expo/bugcraft-studio-672x420.jpg" data-srcset="http://bulma.io/images/expo/bugcraft-studio-1344x840.jpg 2x,
+                                   http://bulma.io/images/expo/bugcraft-studio-672x420.jpg 1x" width="672" height="420">
+                  <span class="bd-website-overlay is-overlay"></span>
+                </a>
+              <h2 class="title is-5 bd-website-name is-marginless">
+                  ColourPal
+                </h2>
+              <p class="has-text-grey-light bd-website-date">
+                ColourPalette Website
+              </p>
+            </article>
+
+            <article class="bd-website ">
+              <a class="bd-website-image" href="https://booknshelf.com/" target="_blank">
+                    <img class="b-lazy" src="http://bulma.io/images/placeholders/empty.png" data-src="http://bulma.io/images/expo/booknshelf-672x420.jpg" data-srcset="http://bulma.io/images/expo/booknshelf-1344x840.jpg 2x,
+                                   http://bulma.io/images/expo/booknshelf-672x420.jpg 1x" width="672" height="420">
+                  <span class="bd-website-overlay is-overlay"></span>
+                </a>
+              <h2 class="title is-5 bd-website-name is-marginless">
+                  Booknshelf
+                </h2>
+              <p class="has-text-grey-light bd-website-date">
+                20 Jul 2017
+              </p>
+            </article>
+
+            <article class="bd-website ">
+              <a class="bd-website-image" href="https://desforets.github.io/md5/" target="_blank">
+
+                    <img class="b-lazy" src="http://bulma.io/images/placeholders/empty.png" data-src="http://bulma.io/images/expo/md5-672x420.jpg" data-srcset="http://bulma.io/images/expo/md5-1344x840.jpg 2x,
+                                   http://bulma.io/images/expo/md5-672x420.jpg 1x" width="672" height="420">
+                  <span class="bd-website-overlay is-overlay"></span>
+                </a>
+              <h2 class="title is-5 bd-website-name is-marginless">
+                  MD5
+                </h2>
+              <p class="has-text-grey-light bd-website-date">
+                24 Jun 2017
+              </p>
+            </article>
+
+            <article class="bd-website bd-is-highlighted">
+              <a class="bd-website-image" href="https://www.driftrock.com/" target="_blank">
+                    <img class="b-lazy" src="http://bulma.io/images/placeholders/empty.png" data-src="http://bulma.io/images/expo/driftrock-1344x840.jpg" data-srcset="http://bulma.io/images/expo/driftrock-2688x1680.jpg 2x,
+                                   http://bulma.io/images/expo/driftrock-1344x840.jpg 1x" width="1344" height="840">
+                  <span class="bd-website-overlay is-overlay"></span>
+                </a>
+              <h2 class="title is-5 bd-website-name is-marginless">
+                  Driftrock
+                </h2>
+              <p class="has-text-grey-light bd-website-date">
+                13 Jul 2017
+              </p>
+            </article> -->
+
+      <!--build:js js/main.min.js -->
+      <script src="js/lib/a-library.js"></script>
+      <script src="js/lib/another-library.js"></script>
+      <script src="js/main.js"></script>
+      <!-- endbuild -->
+
+</div>
+{% include footer.html %}
+
+</body>
+
+</html>
