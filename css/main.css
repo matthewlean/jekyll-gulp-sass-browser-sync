@@ -258,7 +258,7 @@
   box-sizing: border-box; }
 
 html, body {
-  background-color: #fff;
+  background-color: #eceef1;
   margin: 0;
   padding: 0;
   font-family: Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
@@ -278,7 +278,7 @@ p {
   color: #4b515b;
   font-weight: 400;
   font-style: normal;
-  font-size: 21px;
+  font-size: 16px;
   line-height: 1.58;
   letter-spacing: .01em; }
 
@@ -371,7 +371,8 @@ p a:link:hover, p a:visited:hover {
 .info {
   width: 100%;
   background-color: #fff;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eceef1; }
 
 .info img {
   width: 100px;
