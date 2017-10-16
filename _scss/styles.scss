@@ -178,6 +178,37 @@ p a:link:hover,p a:visited:hover{
     color: #036aed;
     margin: 0 10px 0 0;
 }
+
+// Wordpress Old Style
+.primary {
+    display: block;
+    margin: 20px 0 0 0;
+    height: 215px;
+}
+.primary .content-wrap {
+    background-color: #fff;
+    width: 100%;
+    margin: 0 20px 0 0;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.primary .content-wrap .image {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+.primary .content-wrap .image img {
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    float: left;
+}
+.primary .content-wrap .title {
+    margin: 0 0 10px 0;
+}
+.small-wrap{
+      width: 750px;
+    margin: 0 auto;
+}
 // Extra styling // ----------------------------------
 #info{
   max-width: 600px;
