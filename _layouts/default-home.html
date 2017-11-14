@@ -2,8 +2,8 @@
 <html>
 {% include head.html %}
 <body>
+	<div class="maincontent">
 {% include header-main.html %}
-
 
 <div class="site-container m-top-minus-150">
 
@@ -47,7 +47,25 @@
 	</div>
 </div>
 
+<!-- Projects Section -->
 <div class="primary">
+	<div class="content-wrap">
+		{% for post in site.posts %}
+		<article class="bd-website ">
+			<a href="{{ post.url }}">
+						<img class="b-lazy" src="{{site.baseurl}}/assets/site-post/{{post.img}}" width="672" height="420">
+					<span class="bd-website-overlay is-overlay"></span>
+			</a>
+			<h2 class="title is-5 bd-website-name is-marginless">{{ post.title | escape }}</h2>
+			<p class="has-text-grey-light bd-website-date">{{ post.author | escape }}</p>
+		</article>
+		{% endfor %}
+	</div>
+</div>
+
+<!-- Template Section -->
+
+<!-- <div class="primary">
 	<div class="content-wrap">
 			<div class="title">
 				<div class="title-alt">
@@ -62,75 +80,9 @@
 					 and please <a class="bio" href="mailto:mttlean@gmail.com">contact</a> me if you have any questions. </p>
 			</div>
 	</div>
-</div>
+</div> -->
 
 </div>
-
-<!--
-<div class="small-wrap">
-  <div class="primary">
-	<div class="content-wrap">
-		<div class="content">
-			<div class="image">
-				<img src="assets/site-brand/matthew-lean.jpg">
-			</div>
-			<div class="title">
-				<div class="title-alt">
-					<h3>{{ site.name }}</h3>
-					<p>Digital Media Designer</p>
-				</div>
-			</div>
-			<div class="description">
-				<p>Digital Content Creator and graduate from Bournemouth University.
-					Feel free to check out <a class="bio" href="http://matthewlean.co.uk/portfolio.pdf">my portfolio</a> for all my recent projects and graphics work.
-					Extra info and writeup can be found on <a class="bio" href="http://matthewlean.co.uk/blog/">my blog</a>
-					 and please <a class="bio" href="mailto:mttlean@gmail.com">contact</a> me if you have any questions. </p>
-			</div>
-			<div class="links">
-				<a title="Email" class="btn btn-default" href="mailto:mttlean@gmail.com">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-				</a>
-				<a title="Lindedin" class="btn btn-default" href="https://www.linkedin.com/in/m-lean/">
-					<i class="fa fa-linkedin" aria-hidden="true"></i>
-				</a>
-				<a title="GitHub" class="btn btn-default" href="https://github.com/matthewlean">
-					<i class="fa fa-github" aria-hidden="true"></i>
-				</a>
-				<a title="Instagram" class="btn btn-default" href="https://www.instagram.com/matthewlean/">
-					<i class="fa fa-instagram" aria-hidden="true"></i>
-				</a>
-				<a title="Twitter" class="btn btn-default" href="https://twitter.com/matthewLean_">
-					<i class="fa fa-twitter" aria-hidden="true"></i>
-				</a>
-				<a title="Codepen" class="btn btn-default" href="http://codepen.io/matthewlean/">
-					<i class="fa fa-codepen" aria-hidden="true"></i>
-				</a>
-			</div>
-		</div>
-</div>
-</div>
-</div> -->
-<!--
-<div class="info">
-<section class="hero is-medium has-text-centered">
-  <div class="hero-body">
-    <div class="container">
-      <p id="p">
-        <img src="assets/site-brand/matthew-lean.jpg" style="border-radius:100em" ; width="150px;"></img>
-      </p>
-      <h2 id="bulma" class="title">
-        {{ site.name }}
-      </h2>
-      <h3 id="modern-framework" class="subtitle">
-        Digital Media Designer
-      </h3>
-      <p id="info">
-        Digital Content Creator and graduate from Bournemouth University. Feel free to check out <a class="bio" href="http://matthewlean.co.uk/portfolio.pdf">my portfolio</a> for all my recent projects and graphics work. Extra info and writeup can be
-        found on <a class="bio" href="http://matthewlean.co.uk/blog/">my blog</a> and please <a class="bio" href="mailto:mttlean@gmail.com">contact</a> me if you have any questions.
-      </p>
-    </div>
-  </div>
-</div> -->
 
 <!-- <section class="hero">
       <main class="bd-expo">
@@ -240,7 +192,7 @@
       <script src="js/lib/another-library.js"></script>
       <script src="js/main.js"></script>
       <!-- endbuild -->
-
+</div>
 {% include footer.html %}
 
 </body>
